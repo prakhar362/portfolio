@@ -1,11 +1,11 @@
 "use client";
 
 import IconCloud2 from "@/components/ui/icon-cloud";
-
 const slugs = [
   "typescript",
   "javascript",
   "react",
+  "expo",
   "tailwindcss",
   "html5",
   "css3",
@@ -26,12 +26,13 @@ const slugs = [
   "cplusplus",
   "graphql",
   "mongodb",
-  "svelte",
   "turborepo",
   "redis",
-  "php",
-  "mysql"
+  "java",
+  "mysql",
+
 ];
+
 
 export function IconCloud() {
   return (
