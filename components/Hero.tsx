@@ -1,11 +1,14 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/utils/cn";
+import { IconCloud } from "./iconCloud";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 h-screen relative text-white">
+    <div className="pb-0 md:pb-20 pt-20 md:pt-36 h-screen relative text-white">
       {/* Grid Background */}
       <div
         className={cn(
@@ -25,31 +28,40 @@ const Hero = () => {
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-black-100 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] z-0" />
 
       {/* Main Content */}
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center text-center">
-          <p className="uppercase tracking-widest text-xs text-blue-100 mb-3">
-           Crafting Impactful Web Experiences with Precision & Passion
-          </p>
+      <div className="flex justify-center items-center relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-10 px-4 w-full max-w-7xl mx-auto">
+          {/* Icon Cloud */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <div className="relative flex h-auto w-full items-center justify-center overflow-hidden rounded-lg bg-background px-4 pt-4 pb-0 md:p-8">
+              <IconCloud />
+            </div>
+          </div>
 
-          <h1 className="text-[40px] md:text-5xl lg:text-6xl font-bold leading-tight">
-             Building Scalable Products with {" "}
-            <span className="bg-gradient-to-r from-[#d9a7ff] to-[#9b74ff] text-transparent bg-clip-text">
-              Prakhar Shrivastava
-            </span>
-          </h1>
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
+            <p className="uppercase tracking-widest text-xs text-blue-100 mb-3">
+              Crafting Impactful Web Experiences with Precision & Passion
+            </p>
 
-          <p className="text-sm md:text-lg lg:text-2xl text-neutral-300 mt-4">
-            I specialize in turning complex ideas into elegant digital solutions. Let's build something amazing together.
+            <h1 className="text-[40px] md:text-5xl lg:text-6xl font-bold leading-tight">
+              Building Scalable Products with{" "}
+              <span className="bg-gradient-to-r from-[#d9a7ff] to-[#9b74ff] text-transparent bg-clip-text">
+                Prakhar Shrivastava
+              </span>
+            </h1>
 
-          </p>
+            <p className="text-sm md:text-lg lg:text-2xl text-neutral-300 mt-4">
+              I specialize in turning complex ideas into elegant digital solutions. Let's build something amazing together.
+            </p>
 
-           <a href="#about">
-            <MagicButton
-              title="View My Resume"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+            <a href="#about" className="mt-6">
+              <MagicButton
+                title="View My Resume"
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
