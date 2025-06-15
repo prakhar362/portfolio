@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --black: #000;
+  --black-100: #000319;
+  --black-200: rgba(17, 25, 40, 0.75);
+  --black-300: rgba(255, 255, 255, 0.125);
+
+  --white: #FFF;
+  --white-100: #BEC1DD;
+  --white-200: #C1C2D3;
+
+  --blue-100: #E4ECFF;
+  --purple: #CBACF9;
+
+  --border: hsl(var(--border));
+  --background: hsl(var(--background));
+  --foreground: hsl(var(--foreground));
+}
+
+.bg-black-100 {
+  background-color: var(--black-100);
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s linear infinite;
+}
+
+.move-in-circle {
+  animation: moveInCircle 40s linear infinite;
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
