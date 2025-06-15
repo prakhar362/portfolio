@@ -5,10 +5,37 @@ import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/utils/cn";
 import { IconCloud } from "./iconCloud";
+import { AnimatedTooltip } from "./ui/animated-tooltip";
+const people = [
+  {
+    id: 1,
+    name: "Twitter(X)",
+    designation: "prakharshri2005",
+    image:
+      "https://i.pinimg.com/736x/91/8b/20/918b20dc0aa716e09fd0a58f9dd8e720.jpg",
+    link: "https://twitter.com/prakharshri2005",
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    designation: "Prakhar Shrivastava",
+    image:
+      "https://www.citypng.com/public/uploads/preview/hd-vector-flat-linkedin-in-round-icon-png-701751695046390m4phkuuiqm.png",
+    link: "https://www.linkedin.com/in/prakhar-shrivastava-a4927b2b5/",
+  },
+  {
+    id: 3,
+    name: "Github",
+    designation: "prakhar362",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuAikO6HfgCm0CRT5sSRBlYIwdPk7-08utow&s",
+    link: "https://github.com/prakhar362",
+  },
+];
 
 const Hero = () => {
   return (
-    <div className="pb-0 md:pb-20 pt-20 md:pt-36 h-screen relative text-white">
+    <div className="pb-0 md:pb-20 pt-20 md:pt-36 min-h-screen relative text-white">
       {/* Grid Background */}
       <div
         className={cn(
@@ -54,13 +81,18 @@ const Hero = () => {
               I specialize in turning complex ideas into elegant digital solutions. Let's build something amazing together.
             </p>
 
-            <a href="#about" className="mt-6">
-              <MagicButton
-                title="View My Resume"
-                icon={<FaLocationArrow />}
-                position="right"
-              />
-            </a>
+            <div className="flex flex-row items-center justify-center md:justify-start gap-4 mt-6">
+              <a href="#about">
+                <MagicButton
+                  title="View My Resume"
+                  icon={<FaLocationArrow />}
+                  position="right"
+                />
+              </a>
+              <div className="flex flex-row items-center justify-center sm:mt-8">
+                <AnimatedTooltip items={people} />
+              </div>
+            </div>
           </div>
         </div>
       </div>
