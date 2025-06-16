@@ -54,7 +54,7 @@ const items = [
 const Grid = () => {
   return (
     <section id="about">
-      <BentoGrid className="w-full mx-auto md:auto-rows-[24rem]">
+      <BentoGrid className="w-full py-10 mx-auto max-w-7xl auto-rows-[24rem] md:auto-rows-[24rem]">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
