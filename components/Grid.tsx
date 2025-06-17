@@ -4,38 +4,6 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import Image from "next/image";
 import { World } from "./ui/globe";
 
-const globeConfig = {
-  pointSize: 1,
-  atmosphereColor: "#ffffff",
-  showAtmosphere: true,
-  atmosphereAltitude: 0.1,
-  polygonColor: "rgba(255,255,255,0.7)",
-  globeColor: "#1d072e",
-  emissive: "#000000",
-  emissiveIntensity: 0.1,
-  shininess: 0.9,
-  arcTime: 2000,
-  arcLength: 0.9,
-  rings: 1,
-  maxRings: 3,
-  ambientLight: "#ffffff",
-  directionalLeftLight: "#ffffff",
-  directionalTopLight: "#ffffff",
-  pointLight: "#ffffff",
-};
-
-const globeData = [
-  {
-    order: 1,
-    startLat: 48.8566,
-    startLng: 2.3522,
-    endLat: 40.7128,
-    endLng: -74.0060,
-    arcAlt: 0.5,
-    color: "#ffffff"
-  }
-];
-
 const items = [
   {
     id: 1,
@@ -69,8 +37,8 @@ const items = [
   },
   {
     id: 4,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
+    title: "Currently building an AI Trading App",
+    description: "The Inside Scoop:",
     className: "md:col-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
