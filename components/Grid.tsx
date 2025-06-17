@@ -59,24 +59,25 @@ const items = [
   },
   {
     id: 3,
+    title: "Do you want to start a project together?",
+    description: "",
+    className: "md:col-span-1",
+    imgClassName: "",
+    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
+    img: "",
+    spareImg: "",
+  },
+  {
+    id: 4,
     title: "Currently building a JS Animation library",
     description: "The Inside Scoop",
-    className: "md:col-span-1",
+    className: "md:col-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
     spareImg: "/grid.svg",
   },
-  {
-    id: 4,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "md:col-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  }
+  
 ];
 
 const Grid = () => {

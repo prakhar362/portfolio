@@ -21,23 +21,20 @@ export const BentoGrid = ({
 }) => {
   return (
     <div
-      className={cn(
-        // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
-        "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
-        className
-      )}
-    >
+  className={cn(
+    "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto",
+    className
+  )}
+>
       {children}
     </div>
   );
 };
-
 export const BentoGridItem = ({
   className,
   id,
   title,
   description,
-  //   remove unecessary things here
   img,
   imgClassName,
   titleClassName,
@@ -52,9 +49,6 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
-
   const [copied, setCopied] = useState(false);
 
   const defaultOptions = {
@@ -67,7 +61,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "prakharshri2005@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -75,109 +69,41 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none flex flex-col",
         className
       )}
       style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        background: "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
       }}
     >
-      {/* add img divs */}
-      <div className={`${id === 1 && "flex justify-center"} h-full`}>
-        <div className="w-full h-full absolute">
-          {img && (
-            <img
-              src={img}
-              alt={img}
-              className={cn(imgClassName, "object-cover object-center ")}
-            />
-          )}
+      {/* Background image */}
+      {img && (
+        <div className="absolute inset-0 z-0">
+          <img
+            src={img}
+            alt="background"
+            className={cn(imgClassName, "object-cover w-full h-full")}
+          />
         </div>
-        <div
-          className={`absolute right-0 -bottom-5 ${id === 4 && "w-full opacity-80"
-            } `}
-        >
-          {spareImg && (
-            <img
-              src={spareImg}
-              alt={spareImg}
-              //   width={220}
-              className="object-cover object-center w-full h-full"
-            />
-          )}
+      )}
+
+      {/* Spare image if exists */}
+      {spareImg && (
+        <div className="absolute right-0 bottom-0 z-10 opacity-80">
+          <img src={spareImg} alt="overlay" className="object-cover" />
         </div>
-        {id === 3 && (
-          // add background animation , remove the p tag
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
-        )}
+      )}
 
-        <div
-          className={cn(
-            titleClassName,
-            "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
-          )}
-        >
-          {/* change the order of the title and des, font-extralight, remove text-xs text-neutral-600 dark:text-neutral-300 , change the text-color */}
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
-            {description}
-          </div>
-          {/* add text-3xl max-w-96 , remove text-neutral-600 dark:text-neutral-300*/}
-          {/* remove mb-2 mt-2 */}
-          <div
-            className={`font-sans text-lg lg:text-3xl max-w-96 font-bold z-10`}
-          >
-            {title}
-          </div>
+      {/* Special Case: Email Copy Section */}
+      {id === 3 ? (
+        <BackgroundGradientAnimation>
+          <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-white text-center p-6">
+            <h2 className={cn(titleClassName, "text-2xl font-semibold mb-6")}>
+              {title}
+            </h2>
 
-          {/* for the github 3d globe */}
-          {id === 2 && (
-            <World
-              globeConfig={{
-                pointSize: 1,
-                atmosphereColor: "#ffffff",
-                showAtmosphere: true,
-                atmosphereAltitude: 0.1,
-                polygonColor: "rgba(255,255,255,0.7)",
-                globeColor: "#1d072e",
-                emissive: "#000000",
-                emissiveIntensity: 0.1,
-                shininess: 0.9,
-                arcTime: 2000,
-                arcLength: 0.9,
-                rings: 1,
-                maxRings: 3,
-                ambientLight: "#ffffff",
-                directionalLeftLight: "#ffffff",
-                directionalTopLight: "#ffffff",
-                pointLight: "#ffffff",
-              }}
-              data={[
-                {
-                  order: 1,
-                  startLat: 48.8566,
-                  startLng: 2.3522,
-                  endLat: 40.7128,
-                  endLng: -74.0060,
-                  arcAlt: 0.5,
-                  color: "#ffffff"
-                }
-              ]}
-            />
-          )}
-
-          {id === 3 && (
-            <div className="mt-5 relative">
-              <div
-                className={`absolute -bottom-5 right-0 ${copied ? "block" : "block"
-                  }`}
-              >
+            <div className="relative">
+              <div className="absolute -bottom-5 right-0">
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
@@ -189,9 +115,64 @@ export const BentoGridItem = ({
                 otherClasses="!bg-[#161A31]"
               />
             </div>
+          </div>
+        </BackgroundGradientAnimation>
+      ) : (
+        // Default layout for other IDs (1, 2, 4...)
+        <div className="relative z-10 flex flex-col justify-between h-full p-5 lg:p-10">
+          {/* Description */}
+          {description && (
+            <p className="text-sm lg:text-base text-[#C1C2D3] mb-2 font-light">
+              {description}
+            </p>
+          )}
+
+          {/* Title */}
+          {title && (
+            <h3 className={cn(titleClassName, "text-lg lg:text-3xl font-bold text-white")}>
+              {title}
+            </h3>
+          )}
+
+          {/* Globe for id=2 */}
+          {id === 2 && (
+            <div className="absolute right-4 bottom-4 z-10">
+              <World
+                globeConfig={{
+                  pointSize: 1,
+                  atmosphereColor: "#ffffff",
+                  showAtmosphere: true,
+                  atmosphereAltitude: 0.1,
+                  polygonColor: "rgba(255,255,255,0.7)",
+                  globeColor: "#1d072e",
+                  emissive: "#000000",
+                  emissiveIntensity: 0.1,
+                  shininess: 0.9,
+                  arcTime: 2000,
+                  arcLength: 0.9,
+                  rings: 1,
+                  maxRings: 3,
+                  ambientLight: "#ffffff",
+                  directionalLeftLight: "#ffffff",
+                  directionalTopLight: "#ffffff",
+                  pointLight: "#ffffff",
+                }}
+                data={[
+                  {
+                    order: 1,
+                    startLat: 48.8566,
+                    startLng: 2.3522,
+                    endLat: 40.7128,
+                    endLng: -74.0060,
+                    arcAlt: 0.5,
+                    color: "#ffffff",
+                  },
+                ]}
+              />
+            </div>
           )}
         </div>
-      </div>
+      )}
     </div>
   );
 };
