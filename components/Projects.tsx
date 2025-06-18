@@ -7,7 +7,7 @@ import { PinContainer } from "./ui/Pin";
 
 const Projects = () => {
   return (
-    <section id='Projects' className="py-20">
+    <section id='projects' className="py-20">
         <div className="font-bold text-6xl text-center">
       <h1 className="heading text-amber-50">
         A small section of{" "}
