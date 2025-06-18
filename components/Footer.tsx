@@ -1,9 +1,12 @@
+import React, { useState } from "react";
 import { FaLocationArrow } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
+import ContactModal from "./ContactModal";
+
 const people = [
   {
     id: 1,
@@ -32,6 +35,7 @@ const people = [
 ];
 
 const Footer = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <footer className="w-full pt-25 pb-14 bg-black-100 relative overflow-hidden" id="contact">
       <BackgroundBeamsWithCollision className="absolute bg-black-100 inset-0 w-full h-full z-0 pointer-events-none" />
@@ -52,13 +56,13 @@ const Footer = () => {
             Reach out to me Today!
           </span>
         </div>
-        <a href="email: prakharshri2005@gmail.com">
+        <button onClick={() => setShowModal(true)}>
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
             position="right"
           />
-        </a>
+        </button>
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between  items-center relative z-20">
         <p className="md:text-base  text-md md:font-normal font-light text-white">
@@ -68,6 +72,7 @@ const Footer = () => {
           <AnimatedTooltip items={people} />
         </div>
       </div>
+      <ContactModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </footer>
   );
 };
