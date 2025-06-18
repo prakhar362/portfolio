@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
 import MagicButton from "./MagicButton";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
+import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 const people = [
   {
     id: 1,
@@ -32,18 +33,17 @@ const people = [
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-25 pb-10 bg-black-100 relative overflow-hidden" id="contact">
+    <footer className="w-full pt-25 pb-14 bg-black-100 relative overflow-hidden" id="contact">
+      <BackgroundBeamsWithCollision className="absolute bg-black-100 inset-0 w-full h-full z-0 pointer-events-none" />
       {/* background grid */}
-      <div className="absolute inset-0 w-full h-full z-0">
+      <div className="absolute inset-0 w-full h-full z-10 pointer-events-none">
         <img
           src="/footer-grid.svg"
           alt="grid"
           className="w-full h-full opacity-50 object-cover"
         />
       </div>
-      
-
-      <div className="flex flex-col items-center relative z-10">
+      <div className="flex flex-col items-center relative z-20">
         <div className="font-bold text-center mb-10">
           <h1 className="heading text-6xl text-amber-50">
             Let's Connect and Build Together
@@ -52,7 +52,6 @@ const Footer = () => {
             Reach out to me Today!
           </span>
         </div>
-        
         <a href="email: prakharshri2005@gmail.com">
           <MagicButton
             title="Let's get in touch"
@@ -61,11 +60,10 @@ const Footer = () => {
           />
         </a>
       </div>
-      <div className="flex mt-16 md:flex-row flex-col justify-between  items-center relative z-10">
+      <div className="flex mt-16 md:flex-row flex-col justify-between  items-center relative z-20">
         <p className="md:text-base  text-md md:font-normal font-light text-white">
           Copyright © 2025 Prakhar Shrivastava
         </p>
-
         <div className="flex items-center mr-7 gap-5">
           <AnimatedTooltip items={people} />
         </div>

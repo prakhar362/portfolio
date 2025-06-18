@@ -34,7 +34,7 @@ const Experience = () => {
       </div>
       <div className="max-w-4xl mx-auto" ref={containerRef}>
         <TracingBeam bulletOffsets={bulletOffsets}>
-          <div className="space-y-12">
+          <div className="space-y-14">
             {workExperience.map((exp, index) => (
               <div key={exp.id} className="relative">
                 <div className="flex flex-col gap-4">

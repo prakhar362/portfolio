@@ -58,7 +58,7 @@ export const TracingBeam = ({
         className="absolute h-full"
         style={{
           // Responsive left gutter: more space on mobile, matches -left-20 on md+
-          left: 'max(-3rem, calc(-60px))', // -10 (40px) or -60px, whichever is more negative
+          left: 'max(-3rem, calc(-65px))', // -10 (40px) or -60px, whichever is more negative
           top: 12, // matches top-3
           minWidth: 48, // ensure gutter
           zIndex: 20,
