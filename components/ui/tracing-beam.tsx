@@ -12,9 +12,11 @@ import { cn } from "@/lib/utils";
 export const TracingBeam = ({
   children,
   className,
+  bulletPoints = 2, // Number of bullet points to show
 }: {
   children: React.ReactNode;
   className?: string;
+  bulletPoints?: number;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,42 +48,35 @@ export const TracingBeam = ({
     },
   );
 
+  // Calculate positions for bullet points (evenly spaced, but move up from 2nd onwards)
+  const bulletPositions = Array.from({ length: bulletPoints }, (_, i) => {
+    const position = (i * svgHeight) / (bulletPoints - 1);
+    // Move bullets for i >= 1 a bit upwards
+    return i === 0 ? position : position - 45; // adjust 16 to your liking
+  });
+
   return (
     <motion.div
       ref={ref}
       className={cn("relative mx-auto h-full w-full max-w-4xl", className)}
     >
-      <div className="absolute top-3 -left-4 md:-left-20">
-        <motion.div
-          transition={{
-            duration: 0.2,
-            delay: 0.5,
-          }}
-          animate={{
-            boxShadow:
-              scrollYProgress.get() > 0
-                ? "none"
-                : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-          }}
-          className="border-netural-200 ml-[27px] flex h-4 w-4 items-center justify-center rounded-full border shadow-sm"
-        >
-          <motion.div
-            transition={{
-              duration: 0.2,
-              delay: 0.5,
-            }}
-            animate={{
-              backgroundColor: scrollYProgress.get() > 0 ? "white" : "#10b981",
-              borderColor: scrollYProgress.get() > 0 ? "white" : "#059669",
-            }}
-            className="h-2 w-2 rounded-full border border-neutral-300 bg-white"
-          />
-        </motion.div>
+      {/* Beam and green bullets */}
+      <div
+        className="absolute h-full"
+        style={{
+          // Responsive left gutter: more space on mobile, matches -left-20 on md+
+          left: 'max(-3rem, calc(-60px))', // -10 (40px) or -60px, whichever is more negative
+          top: 12, // matches top-3
+          minWidth: 48, // ensure gutter
+          zIndex: 20,
+        }}
+      >
+        {/* Beam SVG */}
         <svg
           viewBox={`0 0 20 ${svgHeight}`}
           width="20"
-          height={svgHeight} // Set the SVG height
-          className="ml-4 block"
+          height={svgHeight}
+          className="ml-4 block absolute top-0 left-0"
           aria-hidden="true"
         >
           <motion.path
@@ -109,8 +104,8 @@ export const TracingBeam = ({
               gradientUnits="userSpaceOnUse"
               x1="0"
               x2="0"
-              y1={y1} // set y1 for gradient
-              y2={y2} // set y2 for gradient
+              y1={y1}
+              y2={y2}
             >
               <stop stopColor="#18CCFC" stopOpacity="0"></stop>
               <stop stopColor="#18CCFC"></stop>
@@ -119,6 +114,21 @@ export const TracingBeam = ({
             </motion.linearGradient>
           </defs>
         </svg>
+        {/* Green bullets absolutely positioned next to org icon/title */}
+        {bulletPositions.map((position, index) => (
+          <div
+            key={index}
+            style={{
+              position: "absolute",
+              left: 28, // aligns to the right of the beam
+              top: position - 8, // vertically center the bullet
+              zIndex: 10,
+            }}
+            className="w-4 h-4 flex items-center justify-center"
+          >
+            <div className="w-3 h-3 rounded-full bg-[#10b981] border-2 border-black shadow-lg" />
+          </div>
+        ))}
       </div>
       <div ref={contentRef}>{children}</div>
     </motion.div>
