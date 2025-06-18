@@ -44,7 +44,7 @@ const Experience = () => {
                     ref={el => (rowRefs.current[index] = el)}
                   >
                     {/* Org Icon */}
-                    <div className="w-16 h-16 relative flex-shrink-0">
+                    <div className="w-12 h-12 relative flex-shrink-0">
                       <Image
                         src={exp.orgThumbnail}
                         alt={exp.organization}
