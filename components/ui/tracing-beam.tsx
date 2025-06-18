@@ -49,10 +49,10 @@ export const TracingBeam = ({
   );
 
   // Calculate positions for bullet points (evenly spaced, but move up from 2nd onwards)
-  const bulletPositions = Array.from({ length: bulletPoints }, (_, i) => {
+  const bulletPositions = Array.from({ length: Math.max(0, bulletPoints - 1) }, (_, i) => {
     const position = (i * svgHeight) / (bulletPoints - 1);
     // Move bullets for i >= 1 a bit upwards
-    return i === 0 ? position : position - 45; // adjust 16 to your liking
+    return i === 0 ? position : position - 45;
   });
 
   return (

@@ -19,11 +19,10 @@ const Experience = () => {
           <div className="space-y-12">
             {workExperience.map((exp, index) => (
               <div key={exp.id} className="relative">
-              
-
                 <div className="flex flex-col gap-4">
-                  {/* Header with Organization Logo and Title */}
-                  <div className="flex items-start gap-4">
+                  {/* Header with Organization Logo, Bullet, and Title */}
+                  <div className="flex items-center gap-2">
+                    {/* Org Icon */}
                     <div className="w-16 h-16 relative flex-shrink-0">
                       <Image
                         src={exp.orgThumbnail}
@@ -32,6 +31,11 @@ const Experience = () => {
                         className="object-contain"
                       />
                     </div>
+                    {/* Bullet for all except last item */}
+                    {index < workExperience.length - 1 && (
+                      <div className="w-3 h-3 rounded-full bg-[#10b981] border-2 border-black shadow-lg mx-2" />
+                    )}
+                    {/* Title/Org */}
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-1">{exp.title}</h3>
                       <p className="text-xl text-[#d9a7ff]">{exp.organization}</p>
