@@ -12,11 +12,11 @@ import { cn } from "@/lib/utils";
 export const TracingBeam = ({
   children,
   className,
-  bulletPoints = 2, // Number of bullet points to show
+  bulletOffsets = [], // Array of vertical offsets for bullets
 }: {
   children: React.ReactNode;
   className?: string;
-  bulletPoints?: number;
+  bulletOffsets?: number[];
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -47,13 +47,6 @@ export const TracingBeam = ({
       damping: 90,
     },
   );
-
-  // Calculate positions for bullet points (evenly spaced, but move up from 2nd onwards)
-  const bulletPositions = Array.from({ length: Math.max(0, bulletPoints - 1) }, (_, i) => {
-    const position = (i * svgHeight) / (bulletPoints - 1);
-    // Move bullets for i >= 1 a bit upwards
-    return i === 0 ? position : position - 45;
-  });
 
   return (
     <motion.div
@@ -114,14 +107,14 @@ export const TracingBeam = ({
             </motion.linearGradient>
           </defs>
         </svg>
-        {/* Green bullets absolutely positioned next to org icon/title */}
-        {bulletPositions.map((position, index) => (
+        {/* Green bullets absolutely positioned at provided offsets */}
+        {bulletOffsets.map((offset, index) => (
           <div
             key={index}
             style={{
               position: "absolute",
               left: 28, // aligns to the right of the beam
-              top: position - 8, // vertically center the bullet
+              top: offset - 8, // vertically center the bullet
               zIndex: 10,
             }}
             className="w-4 h-4 flex items-center justify-center"
