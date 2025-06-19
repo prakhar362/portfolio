@@ -41,7 +41,9 @@ const Experience = () => {
                   {/* Header with Organization Logo and Title */}
                   <div
                     className="flex items-center gap-2"
-                    ref={el => (rowRefs.current[index] = el)}
+                    ref={(el) => {
+                      rowRefs.current[index] = el;
+                    }}
                   >
                     {/* Org Icon */}
                     <div className="w-12 h-12 relative flex-shrink-0">
