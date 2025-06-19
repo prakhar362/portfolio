@@ -1,3 +1,4 @@
+'use client';
 import { TracingBeam } from "./ui/tracing-beam";
 import { workExperience } from "@/data";
 import Image from "next/image";
