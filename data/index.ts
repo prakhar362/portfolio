@@ -77,7 +77,7 @@ export const projects = [
     id: 4,
     title: "Cafeteria Ordering System",
     des: "Developed an automated canteen ordering system,food ordering process with real-time updates,notifications & integrating Razorpay",
-    img: "/p4.svg",
+    img: "/canteen.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg",],
     link: "https://drive.google.com/file/d/1J1i7-Ezdbi8xhfaJpb_vi9RYgQ9jAGbD/view",
   },
