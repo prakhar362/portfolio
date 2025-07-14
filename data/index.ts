@@ -89,6 +89,15 @@ export const projects = [
     iconLists: ["/aud.png","/tail.svg","/js.svg"],
     link: "https://prakhar362.github.io/Music-Player/Music%20Player/Lib/index.html",
   },
+
+  {
+    id: 6,
+    title: "Streamify",
+    des: "Streamify is a real-time chat messaging and video calling platform tailored for social peer learning, language exchange, and community building. Users can chat, call, and collaborate in public or private groups with a clean, modern interface.",
+    img: "/streamify.png",
+    iconLists: ["/re.svg","/mdb.svg" ,"/tail.svg","/js.svg","/getstream.png"],
+    link: "https://streamify-nu-bay.vercel.app/",
+  },
 ];
 
 export const testimonials = [
