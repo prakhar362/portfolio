@@ -65,8 +65,17 @@ export const projects = [
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg","/mdb.svg",],
     link: "https://neuronest-lemon.vercel.app/",
   },
-  {
+   {
     id: 3,
+    title: "Sketchcalibur",
+    des: "real-time collaborative whiteboard.To create ideas visually with your team. Share links, invite collaborators, and draw together seamlessly in themed rooms.",
+    img: "/sketch.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg","/mdb.svg",],
+    link: "https://sketchcalibur.vercel.app/",
+  },
+
+  {
+    id: 4,
     title: "Inkspire - a Blog Application",
     des: "Created a blog application like Medium with real-time post management, JWT authentication, and enhanced search features for a smooth, mobile-friendly experience.",
     img: "/blog.png",
@@ -74,7 +83,7 @@ export const projects = [
     link: "https://inskpire.vercel.app/",
   },
   {
-    id: 4,
+    id: 5,
     title: "Cafeteria Ordering System",
     des: "Developed an automated canteen ordering system,food ordering process with real-time updates,notifications & integrating Razorpay",
     img: "/canteen.png",
@@ -82,21 +91,20 @@ export const projects = [
     link: "https://drive.google.com/file/d/1J1i7-Ezdbi8xhfaJpb_vi9RYgQ9jAGbD/view",
   },
   {
-    id: 5,
-    title: "Music Player",
-    des: "A project that combines DSA and Frontend Development.HTML5 Audio API for audio playback and implements a doubly linked list data structure for playlist management.",
-    img: "/music.png",
-    iconLists: ["/aud.png","/tail.svg","/js.svg"],
-    link: "https://prakhar362.github.io/Music-Player/Music%20Player/Lib/index.html",
-  },
-
-  {
     id: 6,
     title: "Streamify",
     des: "Streamify is a real-time chat messaging and video calling platform tailored for social peer learning, language exchange, and community building. Users can chat, call, and collaborate in public or private groups with a clean, modern interface.",
     img: "/streamify.png",
     iconLists: ["/re.svg","/mdb.svg" ,"/tail.svg","/js.svg","/getstream.png"],
     link: "https://streamify-nu-bay.vercel.app/",
+  },
+  {
+    id: 7,
+    title: "Music Player",
+    des: "A project that combines DSA and Frontend Development.HTML5 Audio API for audio playback and implements a doubly linked list data structure for playlist management.",
+    img: "/music.png",
+    iconLists: ["/aud.png","/tail.svg","/js.svg"],
+    link: "https://prakhar362.github.io/Music-Player/Music%20Player/Lib/index.html",
   },
 ];
 
