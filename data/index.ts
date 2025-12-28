@@ -100,6 +100,14 @@ export const projects = [
   },
   {
     id: 7,
+    title: "Matsya - Fish Recognition App",
+    des: "A data-driven analytical platform empowering fishermen and marine authorities with intelligent insights for sustainable and profitable fishing operations.",
+    img: "/matsya.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/mdb.svg",],
+    link: "https://github.com/prakhar362/fisherman-app",
+  },
+  {
+    id: 8,
     title: "Music Player",
     des: "A project that combines DSA and Frontend Development.HTML5 Audio API for audio playback and implements a doubly linked list data structure for playlist management.",
     img: "/music.png",
