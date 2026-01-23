@@ -82,7 +82,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-row items-center justify-center md:justify-start gap-4 mt-6">
-              <a href="https://drive.google.com/file/d/1XkBxZi9x1vpxDyuhZjHg7fD-KfaZXcL1/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1ZvgRzNubkhKfJKwzrMK3XK9Wqef6e6Pz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <MagicButton
                   title="View My Resume"
                   icon={<FaLocationArrow />}

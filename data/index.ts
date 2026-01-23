@@ -88,7 +88,7 @@ export const projects = [
     des: "Developed an automated canteen ordering system,food ordering process with real-time updates,notifications & integrating Razorpay",
     img: "/canteen.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg",],
-    link: "https://drive.google.com/file/d/1J1i7-Ezdbi8xhfaJpb_vi9RYgQ9jAGbD/view",
+    link: "https://appetize.io/app/b_vbrq2hacm2cze2owt2hjjjm6xe",
   },
   {
     id: 6,
