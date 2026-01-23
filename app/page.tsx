@@ -35,6 +35,7 @@ const FloatingNav = dynamic(() => import("@/components/ui/floating-navbar").then
   loading: () => <div className="h-16" />
 });
 
+//trial of vscode check
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
 
