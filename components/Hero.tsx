@@ -58,17 +58,26 @@ const Hero = () => {
       <div className="flex justify-center items-center relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-center gap-0 md:gap-10 px-4 w-full max-w-7xl mx-auto">
           {/* Icon Cloud */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex justify-center order-2 md:order-1">
             <div className="relative flex h-auto w-full items-center justify-center overflow-hidden rounded-lg bg-background px-4 pt-4 pb-0 md:p-8">
               <IconCloud />
             </div>
           </div>
 
           {/* Text Content */}
-          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-            <p className="uppercase tracking-widest text-xs text-blue-100 mb-3">
-              Crafting Impactful Web Experiences with Precision & Passion
-            </p>
+          <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left order-1 md:order-2">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-[#CBACF9] overflow-hidden shadow-[0_0_20px_rgba(203,172,249,0.3)]">
+                <img
+                  src="/prakhar-shrivastava.png"
+                  alt="Prakhar Shrivastava"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="uppercase tracking-widest text-xs text-blue-100 max-w-60">
+                Crafting Impactful Web Experiences with Precision & Passion
+              </p>
+            </div>
 
             <h1 className="text-[40px] md:text-5xl lg:text-6xl font-bold leading-tight">
               Building Scalable Products with{" "}
@@ -77,11 +86,11 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="text-sm md:text-lg lg:text-2xl text-neutral-300 mt-4">
-              I specialize in turning complex ideas into elegant digital solutions. Let's build something amazing together.
+            <p className="text-sm md:text-lg lg:text-2xl text-neutral-300 mt-4 max-w-2xl">
+              I specialize in turning complex ideas into elegant digital solutions. Full-stack developer passionate about building seamless user experiences.
             </p>
 
-            <div className="flex flex-row items-center justify-center md:justify-start gap-4 mt-6">
+            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-8">
               <a href="https://drive.google.com/file/d/1ZvgRzNubkhKfJKwzrMK3XK9Wqef6e6Pz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <MagicButton
                   title="View My Resume"
@@ -89,7 +98,7 @@ const Hero = () => {
                   position="right"
                 />
               </a>
-              <div className="flex flex-row items-center justify-center sm:mt-8">
+              <div className="flex flex-row items-center justify-center">
                 <AnimatedTooltip items={people} />
               </div>
             </div>

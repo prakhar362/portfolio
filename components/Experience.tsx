@@ -24,7 +24,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <section id="exprience" className="py-10">
+    <section id="experience" className="py-10">
       <div className="font-bold text-6xl text-center mb-10">
         <h1 className="heading text-amber-50">
           My Work{" "}
@@ -78,14 +78,14 @@ const Experience = () => {
                   <p className="text-gray-300 leading-relaxed">{exp.desc}</p>
 
                   {/* Tech Stack */}
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-center gap-4 mt-2">
                     {exp.techStack.map((tech, index) => (
-                      <div key={index} className="w-8 h-8 relative">
+                      <div key={index} className="w-10 h-10 relative bg-black-200 rounded-full border border-white/10 p-2 shadow-sm">
                         <Image
                           src={tech}
                           alt="tech stack"
                           fill
-                          className="object-contain"
+                          className="object-contain p-1"
                         />
                       </div>
                     ))}
