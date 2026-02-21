@@ -54,7 +54,7 @@ export const projects = [
     title: " Learning Management System",
     des: "A full-stack educational platform with RBAC and MERN stack, integrating PayPal SDK along with Cloudinary.",
     img: "/course.png",
-    iconLists: ["/re.svg", "/tail.svg", "/nodejs.svg","/mdb.svg","/pp.png"],
+    iconLists: ["/re.svg", "/tail.svg", "/nodejs.svg", "/mdb.svg", "/pp.png"],
     link: "https://courseconvo.onrender.com/",
   },
   {
@@ -62,26 +62,28 @@ export const projects = [
     title: "SecondBrain Application",
     des: "App lets you store content from multiple sources- all in one place. It helps you create your own second brain to remember, organize, and retrieve important info effortlessly. Secure system with personalized accounts also share important content to friends",
     img: "/brain.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg","/mdb.svg",],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
     link: "https://neuronest-lemon.vercel.app/",
   },
-   {
+  {
     id: 3,
     title: "Sketchcalibur",
     des: "real-time collaborative whiteboard.To create ideas visually with your team. Share links, invite collaborators, and draw together seamlessly in themed rooms.",
     img: "/sketch.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg","/mdb.svg",],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
     link: "https://sketchcalibur.vercel.app/",
   },
-
   {
+
     id: 4,
-    title: "Inkspire - a Blog Application",
-    des: "Created a blog application like Medium with real-time post management, JWT authentication, and enhanced search features for a smooth, mobile-friendly experience.",
-    img: "/blog.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/mdb.svg" ],
-    link: "https://inskpire.vercel.app/",
+    title: "Edumate",
+    des: " educational application designed to transform how you consume and learn from documents. By leveraging advanced AI, Edumate converts static PDFs into interactive summaries, audio experiences, and smart quizzes.",
+    img: "/edumate.jpg",
+    iconLists: ["/chromadb.svg", "/Fastapi.svg", "/ts.svg", "/mdb.svg",],
+    link: "https://github.com/prakhar362/Edumate-app",
+
   },
+
   {
     id: 5,
     title: "Cafeteria Ordering System",
@@ -92,26 +94,35 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Streamify",
-    des: "Streamify is a real-time chat messaging and video calling platform tailored for social peer learning, language exchange, and community building. Users can chat, call, and collaborate in public or private groups with a clean, modern interface.",
-    img: "/streamify.png",
-    iconLists: ["/re.svg","/mdb.svg" ,"/tail.svg","/js.svg","/getstream.png"],
-    link: "https://streamify-nu-bay.vercel.app/",
-  },
-  {
-    id: 7,
     title: "Matsya - Fish Recognition App",
     des: "A data-driven analytical platform empowering fishermen and marine authorities with intelligent insights for sustainable and profitable fishing operations.",
     img: "/matsya.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg","/mdb.svg",],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
     link: "https://github.com/prakhar362/fisherman-app",
   },
   {
+    id: 7,
+    title: "Inkspire - a Blog Application",
+    des: "Created a blog application like Medium with real-time post management, JWT authentication, and enhanced search features for a smooth, mobile-friendly experience.",
+    img: "/blog.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg"],
+    link: "https://inskpire.vercel.app/",
+  },
+  {
     id: 8,
+    title: "Streamify",
+    des: "Streamify is a real-time chat messaging and video calling platform tailored for social peer learning, language exchange, and community building. Users can chat, call, and collaborate in public or private groups with a clean, modern interface.",
+    img: "/streamify.png",
+    iconLists: ["/re.svg", "/mdb.svg", "/tail.svg", "/js.svg", "/getstream.png"],
+    link: "https://streamify-nu-bay.vercel.app/",
+  },
+
+  {
+    id: 9,
     title: "Music Player",
     des: "A project that combines DSA and Frontend Development.HTML5 Audio API for audio playback and implements a doubly linked list data structure for playlist management.",
     img: "/music.png",
-    iconLists: ["/aud.png","/tail.svg","/js.svg"],
+    iconLists: ["/aud.png", "/tail.svg", "/js.svg"],
     link: "https://prakhar362.github.io/Music-Player/Music%20Player/Lib/index.html",
   },
 ];
@@ -159,7 +170,7 @@ export const workExperience = [
     orgThumbnail: "/xillion.jpg",
     timeline: "Jun 2025 - Aug 2025",
     location: "Remote",
-    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/angelone.png","/expo.svg"],
+    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/angelone.png", "/expo.svg"],
     className: "md:col-span-2",
   },
   {
@@ -170,7 +181,7 @@ export const workExperience = [
     orgThumbnail: "/acc.jpg",
     timeline: "Jan 2025 - April 2025",
     location: "Mumbai, India",
-    techStack: ["/re.svg", "/ts.svg", "/nodejs.svg", "/mdb.svg","/redi.svg","/aws.svg"],
+    techStack: ["/re.svg", "/ts.svg", "/nodejs.svg", "/mdb.svg", "/redi.svg", "/aws.svg"],
     className: "md:col-span-2",
   },
   {
@@ -181,7 +192,7 @@ export const workExperience = [
     orgThumbnail: "/exp3.svg",
     timeline: "Nov 2024 - May 2025",
     location: "Remote",
-    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg","/js.svg","/expo.svg"],
+    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg", "/js.svg", "/expo.svg"],
     className: "md:col-span-2",
   },
   {
@@ -192,7 +203,7 @@ export const workExperience = [
     orgThumbnail: "/iste.jpg",
     timeline: "Oct 2024 - Present",
     location: "Mumbai, India",
-    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/js.svg","/mdb.svg","/websocket.svg"],
+    techStack: ["/re.svg", "/tail.svg", "/ts.svg", "/js.svg", "/mdb.svg", "/websocket.svg"],
     className: "md:col-span-2",
   },
 ];
