@@ -51,8 +51,8 @@ const Experience = () => {
           <div className="h-1.5 w-24 bg-purple-600 mx-auto rounded-full mt-4 shadow-[0_0_15px_rgba(203,172,249,0.3)]" />
         </div>
 
-        <div className="max-w-4xl mx-auto relative" ref={containerRef}>
-          <TracingBeam bulletOffsets={bulletOffsets}>
+        <div className="max-w-4xl mx-auto relative md:px-0" ref={containerRef}>
+          <TracingBeam bulletOffsets={bulletOffsets} className="md:ml-0 -mr-6 md:mr-0">
             <div className="space-y-24 py-10">
               {workExperience.map((exp, index) => (
                 <motion.div
@@ -61,9 +61,9 @@ const Experience = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
                   viewport={{ once: true, margin: "-100px" }}
-                  className="relative group"
+                  className="relative group w-full"
                 >
-                  <div className="relative bg-[#000319]/40 backdrop-blur-xl border border-white/10 rounded-[2rem] p-8 md:p-10 hover:border-purple/40 transition-all duration-500 shadow-2xl group-hover:shadow-purple/10">
+                  <div className="relative bg-[#000319]/40 backdrop-blur-xl border border-white/10 rounded-l-[2rem] md:rounded-[2rem] rounded-r-none md:rounded-r-[2rem] p-6 md:p-10 hover:border-purple/40 transition-all duration-500 shadow-2xl group-hover:shadow-purple/10">
                     <div className="flex flex-col md:flex-row gap-8">
                       {/* Left: Logo & Company */}
                       <div
