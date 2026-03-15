@@ -72,8 +72,8 @@ const AboutMe = () => {
 
                         <div className="flex-1 flex flex-col justify-center text-center md:text-left">
                             <div className="flex items-center justify-center md:justify-start gap-2 mb-6">
-                                <span className="px-4 py-1.5 bg-purple/10 border border-purple/20 rounded-full text-purple text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-[0_0_15px_rgba(203,172,249,0.1)]">
-                                    <FaBolt className="text-[10px] animate-pulse" /> Available for Hire
+                                <span className="px-4 py-1.5 bg-purple/10 border border-purple/20 rounded-full text-white text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-[0_0_15px_rgba(203,172,249,0.1)]">
+                                    <FaBolt className="text-[10px] text-white animate-pulse" /> Available for Hire
                                 </span>
                             </div>
                             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Prakhar Shrivastava</h2>
@@ -117,8 +117,8 @@ const AboutMe = () => {
                         </div>
                         <div className="space-y-2">
                             <p className="text-white font-bold text-base">B.Tech IT @ VESIT</p>
-                            <p className="text-purple text-sm font-bold opacity-80 uppercase tracking-tighter">Class of 2027</p>
-                            <p className="text-gray-400 text-sm mt-3 leading-snug">Focused on Software Engineering, Data Structures & Cloud Computing.</p>
+                            <p className="text-white text-sm font-bold opacity-80 uppercase tracking-tighter">Class of 2027</p>
+                            <p className="text-gray-300 text-sm mt-3 leading-snug">Focused on Software Engineering, Data Structures & Cloud Computing.</p>
                         </div>
                     </motion.div>
 
