@@ -90,18 +90,26 @@ const Hero = () => {
               I specialize in turning complex ideas into elegant digital solutions. Full-stack developer passionate about building seamless user experiences.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 mt-8">
-              <a href="https://drive.google.com/file/d/1ZvgRzNubkhKfJKwzrMK3XK9Wqef6e6Pz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <MagicButton
-                  title="View My Resume"
-                  icon={<FaLocationArrow />}
-                  position="right"
-                />
-              </a>
-              <div className="flex flex-row items-center justify-center">
-                <AnimatedTooltip items={people} />
-              </div>
-            </div>
+          <div className="flex items-stretch gap-4 mt-8 justify-center md:justify-start">
+  
+  <a
+    href="https://drive.google.com/file/d/1ZvgRzNubkhKfJKwzrMK3XK9Wqef6e6Pz/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center  md:-mt-10"
+  >
+    <MagicButton
+      title="View My Resume"
+      icon={<FaLocationArrow />}
+      position="right"
+    />
+  </a>
+
+  <div className="flex items-center">
+    <AnimatedTooltip items={people} />
+  </div>
+
+</div>
           </div>
         </div>
       </div>
