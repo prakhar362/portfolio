@@ -111,7 +111,7 @@ const AboutMe = () => {
                     >
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-purple/10 rounded-2xl shadow-inner">
-                                <FaGraduationCap className="text-purple text-xl" />
+                                <FaGraduationCap className="text-white text-xl" />
                             </div>
                             <h3 className="text-2xl font-bold text-white">Academic</h3>
                         </div>
