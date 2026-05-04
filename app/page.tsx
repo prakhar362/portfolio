@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { navItems } from "@/data";
+import LoadingScreen from "@/components/LoadingScreen";
 
 // Dynamically import all components to prevent SSR issues
 const Hero = dynamic(() => import("@/components/Hero"), {
@@ -48,6 +49,7 @@ const GithubStats = dynamic(() => import("@/components/GithubStats"), {
 //trial of vscode check
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setIsClient(true);
@@ -64,17 +66,19 @@ export default function Home() {
   }
 
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <AboutMe />
-        <Grid />
-        <Projects />
-        <Experience />
-
-        <Footer />
-      </div>
-    </main>
+    <>
+      {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
+      <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
+        <div className="max-w-7xl w-full">
+          <FloatingNav navItems={navItems} />
+          <Hero />
+          <AboutMe />
+          <Grid />
+          <Projects />
+          <Experience />
+          <Footer />
+        </div>
+      </main>
+    </>
   );
 }
