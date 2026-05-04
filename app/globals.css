@@ -140,6 +140,11 @@ body {
 }
 
 
+/* GSAP SplitText line mask — each line wraps in overflow-hidden */
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
   height: 4px;
 }
