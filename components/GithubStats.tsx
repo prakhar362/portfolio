@@ -25,7 +25,7 @@ const GithubStats = () => {
             </div>
 
             {/* Calendar */}
-            <div className="w-full overflow-x-auto custom-scrollbar pb-1">
+            <div className="w-full overflow-x-auto custom-scrollbar pb-3">
                 <GitHubCalendar
                     username="prakhar362"
                     blockSize={13}

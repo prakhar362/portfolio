@@ -134,9 +134,34 @@
 html,
 body {
   margin: 0;
-  /* Ensure no default margins */
   overflow-x: hidden;
-  /* Prevent horizontal scroll */
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203, 172, 249, 0.35) rgba(124, 58, 237, 0.08);
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(124, 58, 237, 0.06);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 172, 249, 0.35);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(203, 172, 249, 0.65);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 
@@ -145,20 +170,33 @@ body {
   overflow: hidden;
 }
 
+/* ── Purple scrollbar (horizontal + vertical) ── */
+.custom-scrollbar {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(185, 169, 209, 0.35) rgba(87, 17, 208, 0.08);
+}
+
 .custom-scrollbar::-webkit-scrollbar {
-  height: 4px;
+  height: 2px;
+  width: 2px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  background: rgba(124, 58, 237, 0.08);
+  border-radius: 999px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(203, 172, 249, 0.2);
-  border-radius: 10px;
+  background: rgba(203, 172, 249, 0.35);
+  border-radius: 999px;
+  transition: background 0.2s;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(203, 172, 249, 0.5);
+  background: rgba(203, 172, 249, 0.65);
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
 }

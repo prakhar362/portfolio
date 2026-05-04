@@ -217,9 +217,9 @@ const AboutMe = () => {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="absolute top-10 left-6 md:left-12 text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/30 font-mono"
+        className="absolute top-10 left-6 md:left-12 text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/50 font-mono"
       >
-        Software Developer
+       About Me
       </motion.p>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
