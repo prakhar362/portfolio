@@ -8,13 +8,13 @@ import { PinContainer } from "./ui/Pin";
 const Projects = () => {
   return (
     <section id='projects' className="py-20">
-        <div className="font-bold text-6xl text-center">
-      <h1 className="heading text-amber-50">
-        A small section of{" "}
-        <span className="bg-gradient-to-r from-[#d9a7ff] to-[#9b74ff] text-transparent bg-clip-text">
-                Recent Projects
-        </span>
-      </h1>
+      <div className="font-bold text-6xl text-center">
+        <h1 className="heading text-amber-50">
+          A small section of{" "}
+          <span className="bg-gradient-to-r from-[#d9a7ff] to-[#9b74ff] text-transparent bg-clip-text">
+            Recent Projects
+          </span>
+        </h1>
       </div>
       <div className="flex flex-wrap items-center justify-center p-2 gap-12 mt-10">
         {projects.map((item) => (
