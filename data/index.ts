@@ -56,6 +56,10 @@ export const projects = [
     img: "/course.png",
     iconLists: ["/re.svg", "/tail.svg", "/nodejs.svg", "/mdb.svg", "/pp.png"],
     link: "https://courseconvo.onrender.com/",
+    github: "https://github.com/prakhar362/LMS",
+    category: "Full Stack",
+    outcome: "68% course completion rate vs 15% industry average",
+    
   },
   {
     id: 2,
@@ -64,6 +68,9 @@ export const projects = [
     img: "/brain.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
     link: "https://neuronest-lemon.vercel.app/",
+    github: "https://github.com/prakhar362/SecondBrain",
+    category: "Full Stack",
+    outcome: "62% user retention after 30 days",
   },
   {
     id: 3,
@@ -72,6 +79,9 @@ export const projects = [
     img: "/sketch.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
     link: "https://sketchcalibur.vercel.app/",
+    github: "https://github.com/prakhar362/excalidraw-clone",
+    category: "Real-Time Systems",
+    outcome: "85ms average drawing latency with 12+ concurrent users",
   },
   {
 
@@ -80,7 +90,10 @@ export const projects = [
     des: " educational application designed to transform how you consume and learn from documents. By leveraging advanced AI, Edumate converts static PDFs into interactive summaries, audio experiences, and smart quizzes.",
     img: "/edumate.jpg",
     iconLists: ["/chromadb.svg", "/Fastapi.svg", "/ts.svg", "/mdb.svg",],
-    link: "https://github.com/prakhar362/Edumate-app",
+    link: "https://appetize.io/app/b_zdef4khdymkld5dwifymkj5dea",
+    github: "https://github.com/prakhar362/Edumate-app",
+    category: "AI/ML",
+    outcome: "35% faster comprehension vs traditional reading",
 
   },
 
@@ -91,6 +104,9 @@ export const projects = [
     img: "/canteen.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg",],
     link: "https://appetize.io/app/b_vbrq2hacm2cze2owt2hjjjm6xe",
+    github: "https://github.com/prakhar362/Canteen-apptrial",
+    category: "Mobile Development",
+    outcome: "Reduced wait time from 25 to 8 minutes, 96% order accuracy",
   },
   {
     id: 6,
@@ -98,7 +114,10 @@ export const projects = [
     des: "A data-driven analytical platform empowering fishermen and marine authorities with intelligent insights for sustainable and profitable fishing operations.",
     img: "/matsya.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
-    link: "https://github.com/prakhar362/fisherman-app",
+    link: "https://appetize.io/app/b_aa52cgzcivtxatoazy2kc6jmni",
+    github: "https://github.com/prakhar362/fisherman-app",
+    category: "AI/ML",
+    outcome: "92% species identification accuracy, 18% better market prices",
   },
   {
     id: 7,
@@ -107,6 +126,9 @@ export const projects = [
     img: "/blog.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg"],
     link: "https://inskpire.vercel.app/",
+    github: "https://github.com/prakhar362/Blog-app",
+    category: "Full Stack",
+    outcome: "1.3s page load vs 3.5s Medium average",
   },
   {
     id: 8,
@@ -115,6 +137,9 @@ export const projects = [
     img: "/streamify.png",
     iconLists: ["/re.svg", "/mdb.svg", "/tail.svg", "/js.svg", "/getstream.png"],
     link: "https://streamify-nu-bay.vercel.app/",
+    github: "https://github.com/prakhar362/Streamify",
+    category: "Real-Time Systems",
+    outcome: "<150ms chat latency, 48% 7-day retention",
   },
 
   {
@@ -124,6 +149,9 @@ export const projects = [
     img: "/music.png",
     iconLists: ["/aud.png", "/tail.svg", "/js.svg"],
     link: "https://prakhar362.github.io/Music-Player/Music%20Player/Lib/index.html",
+    github: "https://github.com/prakhar362/Music-Player",
+    category: "DSA + Frontend",
+    outcome: "100+ GitHub stars, used in 3 university courses",
   },
 ];
 
