@@ -41,6 +41,11 @@ const AboutMe = dynamic(() => import("@/components/AboutMe"), {
   loading: () => <div className="h-96 bg-black-100 animate-pulse" />
 });
 
+const StatsSection = dynamic(() => import("@/components/StatsSection"), {
+  ssr: false,
+  loading: () => <div className="h-96 w-screen bg-black-100 animate-pulse" />
+});
+
 const GithubStats = dynamic(() => import("@/components/GithubStats"), {
   ssr: false,
   loading: () => <div className="h-96 bg-black-100 animate-pulse" />
@@ -73,6 +78,7 @@ export default function Home() {
           <FloatingNav navItems={navItems} />
           <Hero />
           <AboutMe />
+          <StatsSection />
           <Grid />
           <Projects />
           <Experience />
