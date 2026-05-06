@@ -39,3 +39,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+HOW_TO_ADD_PROJECT_IMAGES.md

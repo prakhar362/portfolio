@@ -51,7 +51,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: " Learning Management System",
+    title: "Learning Management System",
     des: "A full-stack educational platform with RBAC and MERN stack, integrating PayPal SDK along with Cloudinary.",
     img: "/course.png",
     iconLists: ["/re.svg", "/tail.svg", "/nodejs.svg", "/mdb.svg", "/pp.png"],

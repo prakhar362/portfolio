@@ -6,6 +6,7 @@ import { projectCaseStudies } from "@/data/projectDetails";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export default function ProjectPage() {
   const params = useParams();
@@ -95,18 +96,23 @@ export default function ProjectPage() {
             )}
           </motion.div>
 
-          {/* Project Image */}
+          {/* Project Images Carousel */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl"
           >
-            <img
-              src={project.img}
-              alt={project.title}
-              className="w-full h-auto"
-            />
+            {caseStudy?.images && caseStudy.images.length > 0 ? (
+              <ProjectCarousel images={caseStudy.images} projectTitle={project.title} />
+            ) : (
+              <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-auto"
+                />
+              </div>
+            )}
           </motion.div>
         </div>
       </section>
