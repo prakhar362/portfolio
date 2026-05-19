@@ -59,19 +59,20 @@ export const projects = [
     github: "https://github.com/prakhar362/LMS",
     category: "Full Stack",
     outcome: "68% course completion rate vs 15% industry average",
-    
+
   },
   {
     id: 2,
-    title: "SecondBrain Application",
-    des: "App lets you store content from multiple sources- all in one place. It helps you create your own second brain to remember, organize, and retrieve important info effortlessly. Secure system with personalized accounts also share important content to friends",
-    img: "/brain.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
-    link: "https://neuronest-lemon.vercel.app/",
-    github: "https://github.com/prakhar362/SecondBrain",
-    category: "Full Stack",
-    outcome: "62% user retention after 30 days",
+    title: "NovaScan Loop AI",
+    des: "An AI-powered engineering intelligence platform that correlates GitHub activity, Slack communication, and daily standups to predict burnout, automate management tasks, and provide role-based insights for managers and HR.",
+    img: "/novascan.png",
+    iconLists: ["/next.svg", "/Fastapi.svg", "/ts.svg", "/mdb.svg", "/redi.svg"],
+    link: "https://nova-scan.vercel.app/",
+    github: "https://github.com/Ayushkaranth/NovaScan",
+    category: "AI/ML",
+    outcome: "Full-stack AI platform with Google Gemini, real-time risk scoring & Jira automation",
   },
+
   {
     id: 3,
     title: "Sketchcalibur",
@@ -119,19 +120,9 @@ export const projects = [
     category: "AI/ML",
     outcome: "92% species identification accuracy, 18% better market prices",
   },
+
   {
     id: 7,
-    title: "Inkspire - a Blog Application",
-    des: "Created a blog application like Medium with real-time post management, JWT authentication, and enhanced search features for a smooth, mobile-friendly experience.",
-    img: "/blog.png",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg"],
-    link: "https://inskpire.vercel.app/",
-    github: "https://github.com/prakhar362/Blog-app",
-    category: "Full Stack",
-    outcome: "1.3s page load vs 3.5s Medium average",
-  },
-  {
-    id: 8,
     title: "Streamify",
     des: "Streamify is a real-time chat messaging and video calling platform tailored for social peer learning, language exchange, and community building. Users can chat, call, and collaborate in public or private groups with a clean, modern interface.",
     img: "/streamify.png",
@@ -142,7 +133,7 @@ export const projects = [
     outcome: "<150ms chat latency, 48% 7-day retention",
   },
 
-  {
+  /*{
     id: 9,
     title: "Music Player",
     des: "A project that combines DSA and Frontend Development.HTML5 Audio API for audio playback and implements a doubly linked list data structure for playlist management.",
@@ -152,7 +143,30 @@ export const projects = [
     github: "https://github.com/prakhar362/Music-Player",
     category: "DSA + Frontend",
     outcome: "100+ GitHub stars, used in 3 university courses",
+  },*/
+  {
+    id: 8,
+    title: "SecondBrain Application",
+    des: "App lets you store content from multiple sources- all in one place. It helps you create your own second brain to remember, organize, and retrieve important info effortlessly. Secure system with personalized accounts also share important content to friends",
+    img: "/brain.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/mdb.svg",],
+    link: "https://neuronest-lemon.vercel.app/",
+    github: "https://github.com/prakhar362/SecondBrain",
+    category: "Full Stack",
+    outcome: "62% user retention after 30 days",
   },
+  {
+    id: 9,
+    title: "Inkspire - a Blog Application",
+    des: "Created a blog application like Medium with real-time post management, JWT authentication, and enhanced search features for a smooth, mobile-friendly experience.",
+    img: "/blog.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/mdb.svg"],
+    link: "https://inskpire.vercel.app/",
+    github: "https://github.com/prakhar362/Blog-app",
+    category: "Full Stack",
+    outcome: "1.3s page load vs 3.5s Medium average",
+  },
+
 ];
 
 export const testimonials = [

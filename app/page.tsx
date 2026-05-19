@@ -54,7 +54,16 @@ const GithubStats = dynamic(() => import("@/components/GithubStats"), {
 //trial of vscode check
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
-  const [loading, setLoading] = useState(true);
+  // Only show loading screen on the very first visit of the session
+  const [loading, setLoading] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("hasLoadedOnce");
+  });
+
+  const handleLoadingComplete = () => {
+    sessionStorage.setItem("hasLoadedOnce", "1");
+    setLoading(false);
+  };
 
   useEffect(() => {
     setIsClient(true);
@@ -72,7 +81,7 @@ export default function Home() {
 
   return (
     <>
-      {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
+      {loading && <LoadingScreen onComplete={handleLoadingComplete} />}
       <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5">
         <div className="max-w-7xl w-full">
           <FloatingNav navItems={navItems} />
